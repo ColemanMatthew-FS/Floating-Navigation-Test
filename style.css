@@ -1,0 +1,107 @@
+body {
+    background-color: #444b58;
+    font-family: 'Karla', sans-serif;
+}
+main {
+    height: 100%;
+    /* this keeps the main content in the middle of the page */
+    display: flex;
+    justify-content: center;
+}
+
+#sub-main {
+    /* this forces the post container and sidebar to play nice with each other */
+    display: flex;
+}
+
+/* sidebar has a left margin to account for the main post container
+a fixed position to keep it in place
+and a visibility of hidden at first */
+#sidebar {
+    margin-top: 2%;
+    margin-left: calc(40%);
+    position: fixed;
+    padding: 0px 15px 0px 0px;
+    visibility: hidden;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#sidebar li {
+    margin-top: 10px;
+}
+
+.placeholder-post, #sidebar {
+    border-radius: 5px;
+    border: 1px solid #eee;
+    background: #fff;
+}
+
+.placeholder-post {
+    margin-top: 5%;
+    padding: 6px;
+}
+
+/* when the user scrolls far enough, the sidebar is set to visible and the fade-in plays */
+.active-sidebar {
+    visibility: visible!important;
+    animation: fade_in .5s
+}
+
+@keyframes fade_in {
+    0% {
+         opacity: 0;
+    }
+
+    100% {
+         opacity: 1;
+    }
+}
+
+@keyframes fade_out {
+    0% {
+         opacity: 1;
+    }
+
+    100% {
+         opacity: 0;
+    }
+}
+
+
+
+/* as the window gets smaller, the main post column shrinks as well */
+@media (min-width: 1536px){
+    .placeholder-post {
+        width: 600px;
+    }
+}
+
+@media (max-width: 1536px){
+    .placeholder-post {
+        width: 400px;
+    }
+}
+
+@media (max-width: 960px){
+    .placeholder-post {
+        width: 300px;
+    }
+}
+
+/* at a mobile resolution, the sidebar disappears completely */
+@media (max-width: 768px){
+    main {
+        display: block;
+        text-align: center;
+    }
+    #sub-main {
+        display: inline-block;
+    }
+    #sidebar {
+        display: none;
+    }
+    #post-container {
+        max-width: 65%;
+    }
+}
