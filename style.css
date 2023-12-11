@@ -89,7 +89,7 @@ and a visibility of hidden at first */
     }
 }
 
-/* at a mobile resolution, the sidebar disappears completely */
+/* at a mobile resolution, the sidebar menu disappears completely */
 @media (max-width: 768px){
     main {
         display: block;
