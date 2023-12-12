@@ -9,6 +9,20 @@ main {
     justify-content: center;
 }
 
+h1 {
+    color: #efefef;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+h2 {
+    margin: 2px;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color:#444b58;
+    padding: 0 0 8px 0;
+}
+
 #sub-main {
     /* this forces the post container and sidebar to play nice with each other */
     display: flex;
@@ -21,14 +35,14 @@ and a visibility of hidden at first */
     margin-top: 2%;
     margin-left: calc(40%);
     position: fixed;
-    padding: 0px 15px 0px 0px;
+    padding: 0px 40px 0px 0px;
     visibility: hidden;
-    font-weight: bold;
     font-size: 20px;
 }
 
 #sidebar li {
     margin-top: 10px;
+    list-style-type: none;
 }
 
 .placeholder-post, #sidebar {
@@ -102,6 +116,9 @@ and a visibility of hidden at first */
         display: none;
     }
     #post-container {
-        max-width: 65%;
+        margin: 5%;
+    }
+    .placeholder-post {
+        width: 100%;
     }
 }
