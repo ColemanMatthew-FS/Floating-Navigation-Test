@@ -1,4 +1,11 @@
-This is a test website built to the following specifications:
+# To run:
+1. Click "code" on Github
+2. Click "Download ZIP"
+3. Open file location
+4. Extract .zip file wherever you wish
+5. Click on index.html
+
+## This is a test website built to the following specifications:
 
 > Using HTML/CSS/JavaScript, please build a floating navigation with the following requirements:
 > 1. Make the page responsive. **(See line 87 onwards in style.css)**
